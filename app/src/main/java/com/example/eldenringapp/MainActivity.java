@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         webView.setWebViewClient(new WebViewClient());
 
         // add the url of gif
-        webView.loadUrl("gif/");
+        webView.loadUrl("https://media0.giphy.com/media/qCH9KuZ80OTaaqNLpK/giphy.gif?cid=ecf05e473u2jjuddo9rpvcv5ej0pyj81sbtw536zcmqrgpcy&rid=giphy.gif&ct=g");
 
 
     }
