@@ -2,27 +2,25 @@ package com.example.eldenringapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
+import android.widget.ImageView;
+import com.bumptech.glide.Glide;
 
 public class MainActivity extends AppCompatActivity {
-    WebView webView;
+
+    @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // initialise the layout
-        webView = findViewById(R.id.webvidew);
+        ImageView imageView = findViewById(R.id.imageView);
+        Glide.with(this).load(R.raw.eldenring).into(imageView);
 
-        // enable the javascript to load the url
-        webView.getSettings().setJavaScriptEnabled(true);
-        webView.setWebViewClient(new WebViewClient());
-
-        // add the url of gif
-        webView.loadUrl("https://media0.giphy.com/media/qCH9KuZ80OTaaqNLpK/giphy.gif?cid=ecf05e473u2jjuddo9rpvcv5ej0pyj81sbtw536zcmqrgpcy&rid=giphy.gif&ct=g");
 
 
     }
 }
+
+
