@@ -58,6 +58,7 @@
         android:layout_marginStart="36dp"
         android:layout_marginTop="16dp"
         android:text="TextView"
+        android:fontFamily="@font/eldenringfont"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/classe_details_description" />
@@ -69,6 +70,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="36dp"
         android:text="TextView"
+        android:fontFamily="@font/eldenringfont"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/classe_details_description" />
@@ -79,6 +81,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="TextView"
+        android:fontFamily="@font/eldenringfont"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toStartOf="@+id/stat_classe_faith"
         app:layout_constraintStart_toEndOf="@+id/stat_classe_int"
@@ -90,6 +93,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:text="TextView"
+        android:fontFamily="@font/eldenringfont"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="34sp"
         app:layout_constraintEnd_toStartOf="@+id/stat_classe_mind"
@@ -103,6 +107,7 @@
         android:layout_marginStart="36dp"
         android:layout_marginTop="30dp"
         android:text="TextView"
+        android:fontFamily="@font/eldenringfont"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/stat_classe_int" />
@@ -113,6 +118,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:text="TextView"
+        android:fontFamily="@font/eldenringfont"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="@+id/stat_classe_dexterity"
         app:layout_constraintStart_toStartOf="parent" />
@@ -123,6 +129,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="TextView"
+        android:fontFamily="@font/eldenringfont"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toStartOf="@+id/stat_classe_arcane"
         app:layout_constraintStart_toEndOf="@+id/stat_classe_endurance"
@@ -134,6 +141,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="36dp"
         android:text="TextView"
+        android:fontFamily="@font/eldenringfont"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="@+id/stat_classe_dexterity"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -145,6 +153,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="36dp"
         android:text="TextView"
+        android:fontFamily="@font/eldenringfont"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/stat_classe_faith" />
