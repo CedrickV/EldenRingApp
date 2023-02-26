@@ -55,21 +55,19 @@ public class ClasseActivity extends AppCompatActivity {
 
                     JSONArray Data = response.getJSONArray("data");
                     for (int i = 0; i < Data.length(); i++){
+
+                        //Récupération des données générales
                         JSONObject donnee = Data.getJSONObject(i);
                         Classe c = new Classe(donnee.getString("name"),
                                 donnee.getString("image"),
                                 donnee.getString("description"));
 
+                        //Récupération des données stats
                         JSONObject datastats = donnee.getJSONObject("stats");
                         Log.d(TAG, "onResponse : "+datastats);
                         c.setStats(datastats.getString("level"),datastats.getString("vigor"),datastats.getString("mind"),
                                 datastats.getString("endurance"),datastats.getString("strength"),datastats.getString("dexterity"),
                                 datastats.getString("intelligence"),datastats.getString("faith"),datastats.getString("arcane"));
-
-
-
-
-
 
                         all_classes.add(c);
                         adapter.notifyDataSetChanged();
