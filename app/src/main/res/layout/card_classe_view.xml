@@ -44,8 +44,12 @@
                 android:gravity="center"
                 android:text="Classe name"
                 android:textColor="#000000"
-                android:textSize="28sp"
+                android:textSize="35sp"
                 android:textStyle="bold"
+                android:shadowColor="@color/black"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="5"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/classe_imageView" />

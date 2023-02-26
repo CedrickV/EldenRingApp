@@ -35,6 +35,10 @@
         android:textColor="#000000"
         android:textSize="34sp"
         android:background="@drawable/border"
+        android:shadowColor="@color/black"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
@@ -51,6 +55,10 @@
         android:textColor="#000000"
         android:textSize="18sp"
         android:background="@drawable/border"
+        android:shadowColor="@color/black"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/classe_details_name" />
@@ -63,8 +71,12 @@
         android:layout_marginTop="16dp"
         android:fontFamily="@font/eldenringfont"
         android:text="TextView"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="18sp"
         android:textColor="#00BCD4"
+        android:shadowColor="@color/black"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/classe_details_description" />
 
@@ -78,6 +90,10 @@
         android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#E1AD76"
+        android:shadowColor="@color/black"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/classe_details_description" />
 
@@ -90,6 +106,10 @@
         android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#4CAF50"
+        android:shadowColor="@color/black"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/classe_details_description" />
@@ -103,6 +123,10 @@
         android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="34sp"
+        android:shadowColor="@color/black"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/stat_classe_vigor" />
@@ -117,6 +141,10 @@
         android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#F80000"
+        android:shadowColor="@color/black"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/stat_classe_int" />
 
@@ -127,8 +155,12 @@
         android:layout_marginStart="36dp"
         android:fontFamily="@font/eldenringfont"
         android:text="TextView"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="18sp"
         android:textColor="#FFC107"
+        android:shadowColor="@color/black"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="5"
         app:layout_constraintBottom_toBottomOf="@+id/stat_classe_dexterity"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -139,8 +171,12 @@
         android:layout_marginTop="24dp"
         android:fontFamily="@font/eldenringfont"
         android:text="TextView"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="18sp"
         android:textColor="#D34887"
+        android:shadowColor="@color/black"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/stat_classe_level" />
@@ -154,6 +190,10 @@
         android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#56E6FB"
+        android:shadowColor="@color/black"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="5"
         app:layout_constraintBottom_toBottomOf="@+id/stat_classe_dexterity"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -165,6 +205,10 @@
         android:layout_marginEnd="36dp"
         android:fontFamily="@font/eldenringfont"
         android:text="TextView"
+        android:shadowColor="@color/black"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="5"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#6B00FF"
         app:layout_constraintEnd_toEndOf="parent"
