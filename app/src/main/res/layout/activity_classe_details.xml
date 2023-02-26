@@ -82,11 +82,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="TextView"
         android:fontFamily="@font/eldenringfont"
+        android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintEnd_toStartOf="@+id/stat_classe_faith"
-        app:layout_constraintStart_toEndOf="@+id/stat_classe_int"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/classe_details_description" />
 
     <TextView
@@ -94,12 +94,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:text="TextView"
         android:fontFamily="@font/eldenringfont"
+        android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="34sp"
-        app:layout_constraintEnd_toStartOf="@+id/stat_classe_mind"
-        app:layout_constraintStart_toEndOf="@+id/stat_classe_strength"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/stat_classe_vigor" />
 
     <TextView
@@ -130,11 +130,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="TextView"
         android:fontFamily="@font/eldenringfont"
+        android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintEnd_toStartOf="@+id/stat_classe_arcane"
-        app:layout_constraintStart_toEndOf="@+id/stat_classe_endurance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/stat_classe_level" />
 
     <TextView
