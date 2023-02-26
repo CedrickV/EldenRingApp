@@ -1,6 +1,8 @@
 package com.example.eldenringapp.Armes;
 
-public class Armes {
+import java.io.Serializable;
+
+public class Armes implements Serializable {
     private String name;
     private String description;
     private String armeUrl;
