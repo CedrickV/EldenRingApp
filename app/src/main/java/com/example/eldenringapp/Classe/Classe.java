@@ -8,6 +8,20 @@ public class Classe implements Serializable {
     private String imageURL;
     private String description;
 
+    private String intelligence, dex, vigor, mind, end, level, faith, arc, str;
+
+    public void setStats(String lvl, String vig, String md, String end, String str, String dex, String it, String ft, String arc){
+        this.level = "LEVEL : " +lvl;
+        this.dex = "Dexterity : " + dex;
+        this.vigor = "Vigor : " + vig;
+        this.mind = "Mind : " +md;
+        this.end = "Endurance : " +end;
+        this.str = "Strength : " + str;
+        this.intelligence = "Intelligence : " + it;
+        this.faith = "Faith : " +ft;
+        this.arc = "Arcane : " +arc;
+    }
+
 
     public Classe(String name, String imageURL, String description) {
         this.name = name;
@@ -38,4 +52,77 @@ public class Classe implements Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+    public String getIntelligence() {
+        return intelligence;
+    }
+
+    public void setIntelligence(String intelligence) {
+        this.intelligence = intelligence;
+    }
+
+    public String getDex() {
+        return dex;
+    }
+
+    public void setDex(String dex) {
+        this.dex = dex;
+    }
+
+    public String getVigor() {
+        return vigor;
+    }
+
+    public void setVigor(String vigor) {
+        this.vigor = vigor;
+    }
+
+    public String getMind() {
+        return mind;
+    }
+
+    public void setMind(String mind) {
+        this.mind = mind;
+    }
+
+    public String getEnd() {
+        return end;
+    }
+
+    public void setEnd(String end) {
+        this.end = end;
+    }
+
+    public String getLevel() {
+        return level;
+    }
+
+    public void setLevel(String level) {
+        this.level = level;
+    }
+
+    public String getFaith() {
+        return faith;
+    }
+
+    public void setFaith(String faith) {
+        this.faith = faith;
+    }
+
+    public String getArc() {
+        return arc;
+    }
+
+    public void setArc(String arc) {
+        this.arc = arc;
+    }
+
+    public String getStr() {
+        return str;
+    }
+
+    public void setStr(String str) {
+        this.str = str;
+    }
+
+
 }

@@ -18,8 +18,8 @@ public class ClasseDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_classe_details);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        
         Intent i = getIntent();
         Bundle data = i.getExtras();
         Classe c = (Classe) data.getSerializable("ClassData");
@@ -33,7 +33,7 @@ public class ClasseDetailsActivity extends AppCompatActivity {
         description.setText(c.getDescription());
         Picasso.get().load(c.getImageURL()).into(image);
 
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
 
 
 
