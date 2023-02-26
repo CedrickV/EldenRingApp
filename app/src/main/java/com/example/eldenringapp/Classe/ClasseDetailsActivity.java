@@ -33,7 +33,7 @@ public class ClasseDetailsActivity extends AppCompatActivity {
         description.setText(c.getDescription());
         Picasso.get().load(c.getImageURL()).into(image);
 
-        //getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 
 

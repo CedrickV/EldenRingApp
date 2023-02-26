@@ -1,6 +1,9 @@
 package com.example.eldenringapp.Armes;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,9 +35,19 @@ public class ArmesAdapter extends RecyclerView.Adapter<ArmesAdapter.ViewHolder> 
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.nom.setText(toutesArmes.get(position).getName());
         Picasso.get().load(toutesArmes.get(position).getArmeUrl()).into(holder.armesImage);
+        holder.vv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Bundle b = new Bundle();
+                b.putSerializable("armeData",toutesArmes.get(position));
+                Intent intent = new Intent(context,Details.class);
+                intent.putExtras(b);
+                view.getContext().startActivity(intent);
+            }
+        });
     }
 
     @Override
