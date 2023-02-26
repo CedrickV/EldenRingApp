@@ -35,19 +35,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
         Button buttonClasse = findViewById(R.id.button_Act3);
         buttonClasse.setOnClickListener(new View.OnClickListener() {
             @Override

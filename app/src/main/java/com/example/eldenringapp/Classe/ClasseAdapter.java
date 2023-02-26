@@ -1,7 +1,10 @@
 package com.example.eldenringapp.Classe;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.media.Image;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,10 +37,21 @@ public class ClasseAdapter extends RecyclerView.Adapter<ClasseAdapter.ViewHolder
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ClasseAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ClasseAdapter.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.title.setText(allClasses.get(position).getName());
         holder.classeDescription.setText(allClasses.get(position).getDescription());
         Glide.with(holder.vv).load(allClasses.get(position).getImageURL()).into(holder.classeImage);
+
+        holder.vv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, ClasseDetailsActivity.class);
+                Bundle b = new Bundle();
+                b.putSerializable("ClassData", allClasses.get(position));
+                intent.putExtras(b);
+                view.getContext().startActivity(intent);
+            }
+        });
     }
 
     @Override
