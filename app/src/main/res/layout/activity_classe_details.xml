@@ -59,9 +59,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginTop="16dp"
-        android:text="TextView"
         android:fontFamily="@font/eldenringfont"
+        android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#00BCD4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/classe_details_description" />
 
@@ -71,9 +72,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="36dp"
-        android:text="TextView"
         android:fontFamily="@font/eldenringfont"
+        android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#E1AD76"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/classe_details_description" />
 
@@ -85,6 +87,7 @@
         android:fontFamily="@font/eldenringfont"
         android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#4CAF50"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/classe_details_description" />
@@ -111,6 +114,7 @@
         android:fontFamily="@font/eldenringfont"
         android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#F80000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/stat_classe_int" />
 
@@ -119,9 +123,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
-        android:text="TextView"
         android:fontFamily="@font/eldenringfont"
+        android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFC107"
         app:layout_constraintBottom_toBottomOf="@+id/stat_classe_dexterity"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -133,6 +138,7 @@
         android:fontFamily="@font/eldenringfont"
         android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#D34887"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/stat_classe_level" />
@@ -142,9 +148,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="36dp"
-        android:text="TextView"
         android:fontFamily="@font/eldenringfont"
+        android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#56E6FB"
         app:layout_constraintBottom_toBottomOf="@+id/stat_classe_dexterity"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -154,9 +161,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="36dp"
-        android:text="TextView"
         android:fontFamily="@font/eldenringfont"
+        android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#6B00FF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/stat_classe_faith" />
 
