@@ -34,6 +34,7 @@
         android:text="Name -"
         android:textColor="#000000"
         android:textSize="34sp"
+        android:background="@drawable/border"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
@@ -49,6 +50,7 @@
         android:text="Description"
         android:textColor="#000000"
         android:textSize="18sp"
+        android:background="@drawable/border"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/classe_details_name" />
@@ -63,6 +65,7 @@
         android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#00BCD4"
+        android:background="@drawable/border"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/classe_details_description" />
 
@@ -76,6 +79,7 @@
         android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#E1AD76"
+        android:background="@drawable/border"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/classe_details_description" />
 
@@ -88,6 +92,7 @@
         android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#4CAF50"
+        android:background="@drawable/border"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/classe_details_description" />
@@ -101,6 +106,7 @@
         android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="34sp"
+        android:background="@drawable/border"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/stat_classe_vigor" />
@@ -115,6 +121,7 @@
         android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#F80000"
+        android:background="@drawable/border"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/stat_classe_int" />
 
@@ -127,6 +134,7 @@
         android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FFC107"
+        android:background="@drawable/border"
         app:layout_constraintBottom_toBottomOf="@+id/stat_classe_dexterity"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -139,6 +147,7 @@
         android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#D34887"
+        android:background="@drawable/border"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/stat_classe_level" />
@@ -152,6 +161,7 @@
         android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#56E6FB"
+        android:background="@drawable/border"
         app:layout_constraintBottom_toBottomOf="@+id/stat_classe_dexterity"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -164,6 +174,7 @@
         android:fontFamily="@font/eldenringfont"
         android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:background="@drawable/border"
         android:textColor="#6B00FF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/stat_classe_faith" />
