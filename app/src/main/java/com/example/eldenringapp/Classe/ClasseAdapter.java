@@ -3,7 +3,6 @@ package com.example.eldenringapp.Classe;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,7 +15,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.eldenringapp.R;
-import com.squareup.picasso.Picasso;
 
 import java.util.List;
 

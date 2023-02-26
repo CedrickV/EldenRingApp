@@ -13,14 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EldenRingApp"
         tools:targetApi="31">
+
         <activity
-            android:name=".ClasseDetailsActivity"
+            android:name=".Classe.ClasseDetailsActivity"
             android:exported="false" />
         <activity
-            android:name=".Classe_DetailsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Details"
+            android:name=".Armes.Details"
             android:exported="false" />
         <activity
             android:name=".Armes.ArmesActivity"
