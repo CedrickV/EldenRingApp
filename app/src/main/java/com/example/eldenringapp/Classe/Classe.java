@@ -8,6 +8,7 @@ public class Classe implements Serializable {
     private String imageURL;
     private String description;
 
+
     public Classe(String name, String imageURL, String description) {
         this.name = name;
         this.imageURL = imageURL;
