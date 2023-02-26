@@ -1,6 +1,8 @@
 package com.example.eldenringapp.Classe;
 
-public class Classe {
+import java.io.Serializable;
+
+public class Classe implements Serializable {
 
     private String name;
     private String imageURL;
