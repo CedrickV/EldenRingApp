@@ -16,7 +16,7 @@
 
         <ImageView
             android:id="@+id/classe_details_imageview"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="450dp"
             tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
