@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ImageView imageView = findViewById(R.id.class_imageView);
+        ImageView imageView = findViewById(R.id.classe_imageView);
         Glide.with(this).load(R.raw.eldenring).into(imageView);
 
 

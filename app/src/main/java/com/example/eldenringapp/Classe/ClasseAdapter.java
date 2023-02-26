@@ -1,24 +1,38 @@
 package com.example.eldenringapp.Classe;
 
-import android.annotation.SuppressLint;
-import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.eldenringapp.R;
 
-import java.util.List;
+public class ClasseAdapter extends RecyclerView.Adapter<ClasseAdapter.ViewHolder>{
 
-//public class ClasseAdapter extends RecyclerView.Adapter<ClasseAdapter.ViewHolder>{
-//
-//
-//}
+    @NonNull
+    @Override
+    public ClasseAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_classe_view,parent, false);
+        return new ViewHolder(v);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull ClasseAdapter.ViewHolder holder, int position) {
+
+    }
+
+    @Override
+    public int getItemCount() {
+        return 0;
+    }
+    public class ViewHolder extends RecyclerView.ViewHolder{
+
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
+
+        }
+    }
+}
 
