@@ -12,14 +12,14 @@ public class Classe implements Serializable {
 
     public void setStats(String lvl, String vig, String md, String end, String str, String dex, String it, String ft, String arc){
         this.level = "LEVEL : " +lvl;
-        this.dex = "Dexterity : " + dex;
-        this.vigor = "Vigor : " + vig;
-        this.mind = "Mind : " +md;
-        this.end = "Endurance : " +end;
-        this.str = "Strength : " + str;
-        this.intelligence = "Intelligence : " + it;
-        this.faith = "Faith : " +ft;
-        this.arc = "Arcane : " +arc;
+        this.dex = "DEXTERITY : " + dex;
+        this.vigor = "VIGOR : " + vig;
+        this.mind = "MIND : " +md;
+        this.end = "ENDURANCE : " +end;
+        this.str = "STRENGTH : " + str;
+        this.intelligence = "INTELLIGENCE : " + it;
+        this.faith = "FAITH : " +ft;
+        this.arc = "ARCANE : " +arc;
     }
 
 
