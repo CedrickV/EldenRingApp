@@ -1,4 +1,4 @@
-package com.example.eldenringapp.Armes;
+package com.example.eldenringapp.Armures;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -22,35 +22,33 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ArmesActivity extends AppCompatActivity {
+public class ArmuresActivity extends AppCompatActivity {
     public static final String TAG = "TAG";
-    RecyclerView armeList;
-    ArmesAdapter adapter;
-    List<Armes> toutes_armes;
+    RecyclerView armuresList;
+    List<Armures> toutes_armures;
+
+    ArmuresAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_armes);
+        setContentView(R.layout.activity_armures);
 
-        toutes_armes = new ArrayList<>();
-        armeList = findViewById(R.id.armesList);
-        armeList.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new ArmesAdapter(this,toutes_armes);
-        armeList.setAdapter(adapter);
+        toutes_armures = new ArrayList<>();
+        armuresList = findViewById(R.id.armuresList);
+        armuresList.setLayoutManager(new LinearLayoutManager(this));
+        adapter = new ArmuresAdapter(this,toutes_armures);
+        armuresList.setAdapter(adapter);
 
         getJsonData();
-
-
     }
 
     private void getJsonData() {
-        String URL = "https://eldenring.fanapis.com/api/weapons?limit=500";
+        String URL = "https://eldenring.fanapis.com/api/armors?limit=500";
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         JsonObjectRequest objectRequest = new JsonObjectRequest(Request.Method.GET, URL, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
-                //Log.d(TAG, "onResponse: " +response);
                 try {
                     JSONArray datas = response.getJSONArray("data");
 
@@ -59,13 +57,13 @@ public class ArmesActivity extends AppCompatActivity {
                     for (int i = 0; i < datas.length(); i++) {
                         JSONObject data = datas.getJSONObject(i);
 
-                        Armes armes = new Armes();
+                        Armures armures = new Armures();
 
-                        armes.setName(data.getString("name"));
-                        armes.setDescription(data.getString("description"));
-                        armes.setArmeUrl(data.getString("image"));
+                        armures.setName(data.getString("name"));
+                        armures.setDescription(data.getString("description"));
+                        armures.setArmuresUrl(data.getString("image"));
 
-                        toutes_armes.add(armes);
+                        toutes_armures.add(armures);
                         adapter.notifyDataSetChanged();
                     }
 
@@ -73,6 +71,8 @@ public class ArmesActivity extends AppCompatActivity {
                 } catch (JSONException e) {
                     throw new RuntimeException(e);
                 }
+
+
             }
         }, new Response.ErrorListener() {
             @Override
