@@ -6,6 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".Classe.ClasseDetailsActivity">
 
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="-16dp"
+        android:background="@drawable/border"
+        app:layout_constraintBottom_toBottomOf="@+id/stat_classe_dexterity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/classe_details_description" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
