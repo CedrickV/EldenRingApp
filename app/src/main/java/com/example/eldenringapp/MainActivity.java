@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.example.eldenringapp.Armures.Armures;
+import com.example.eldenringapp.Armures.ArmuresActivity;
 import com.example.eldenringapp.Classe.ClasseActivity;
 import com.example.eldenringapp.Armes.ArmesActivity;
 
@@ -30,6 +32,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), ArmesActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button buttonArmures = findViewById(R.id.button_Armures);
+        buttonArmures.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ArmuresActivity.class);
                 startActivity(intent);
             }
         });

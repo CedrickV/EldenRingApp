@@ -53,7 +53,7 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_Act2" />
+        app:layout_constraintTop_toBottomOf="@+id/button_Armures" />
 
     <Button
         android:id="@+id/button_Armes"
@@ -68,7 +68,7 @@
         app:layout_constraintTop_toBottomOf="@+id/classe_imageView" />
 
     <Button
-        android:id="@+id/button_Act2"
+        android:id="@+id/button_Armures"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"

@@ -13,12 +13,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EldenRingApp"
         tools:targetApi="31">
-
+        <activity
+            android:name=".Armures.ArmuresDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Armures.ArmuresActivity"
+            android:exported="false" />
         <activity
             android:name=".Classe.ClasseDetailsActivity"
             android:exported="false" />
         <activity
-            android:name=".Armes.Details"
+            android:name=".Armes.ArmesDetailsActivity"
             android:exported="false" />
         <activity
             android:name=".Armes.ArmesActivity"
