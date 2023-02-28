@@ -95,6 +95,22 @@ public class ArmuresActivity extends AppCompatActivity {
                         armures.setName(data.getString("name"));
                         armures.setDescription(data.getString("description"));
                         armures.setArmuresUrl(data.getString("image"));
+                        armures.setWeight(data.getString("weight"));
+
+                        JSONArray resistance = data.getJSONArray("resistance");
+
+                        String immunity = resistance.getJSONObject(0).getString("amount");
+                        String Robust = resistance.getJSONObject(1).getString("amount");
+                        String Focus = resistance.getJSONObject(2).getString("amount");
+                        String Vitality = resistance.getJSONObject(3).getString("amount");
+                        String Poise = resistance.getJSONObject(4).getString("amount");
+
+
+                        armures.setImmunity("Immunity : " + immunity);
+                        armures.setRobust("Robustness : " + Robust);
+                        armures.setFocus("Focus : " + Focus);
+                        armures.setVitality("Vitality : "+Vitality);
+                        armures.setPoise("Poise : "+Poise);
 
                         toutes_armures.add(armures);
                         adapter.notifyDataSetChanged();

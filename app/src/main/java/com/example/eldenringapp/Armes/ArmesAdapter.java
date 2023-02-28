@@ -39,6 +39,7 @@ public class ArmesAdapter extends RecyclerView.Adapter<ArmesAdapter.ViewHolder> 
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.nom.setText(toutesArmes.get(position).getName());
         Picasso.get().load(toutesArmes.get(position).getArmeUrl()).into(holder.armesImage);
+        holder.description.setText(toutesArmes.get(position).getDescription());
         holder.vv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -65,9 +66,12 @@ public class ArmesAdapter extends RecyclerView.Adapter<ArmesAdapter.ViewHolder> 
         ImageView armesImage;
         TextView nom;
         View vv;
+        TextView description;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
+            description = itemView.findViewById(R.id.armeDescription);
             armesImage = itemView.findViewById(R.id.imageArme);
             nom = itemView.findViewById(R.id.nomArme);
             vv = itemView;

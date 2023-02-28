@@ -29,6 +29,20 @@ public class ArmuresDetailsActivity extends AppCompatActivity {
         TextView desc = findViewById(R.id.armureDescription);
         ImageView imageArme = findViewById(R.id.imagedArmure);
 
+        TextView immunity = findViewById(R.id.stat_armure_immunity);
+        TextView focus = findViewById(R.id.stat_armure_focus);
+        TextView poise = findViewById(R.id.stat_armure_poise);
+        TextView robust = findViewById(R.id.stat_armure_robust);
+        TextView vitality = findViewById(R.id.stat_armure_vitality);
+        TextView weight = findViewById(R.id.stat_armure_weight);
+
+        weight.setText(armures.getWeight());
+        vitality.setText(armures.getVitality());
+        robust.setText(armures.getRobust());
+        poise.setText(armures.getPoise());
+        focus.setText(armures.getFocus());
+        immunity.setText(armures.getImmunity());
+
         name.setText(armures.getName());
         desc.setText(armures.getDescription());
         Picasso.get().load(armures.getArmuresUrl()).into(imageArme);

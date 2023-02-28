@@ -3,7 +3,6 @@ package com.example.eldenringapp.Classe;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.WindowManager;
 import android.widget.ImageView;
@@ -34,7 +33,7 @@ public class ClasseDetailsActivity extends AppCompatActivity {
         Picasso.get().load(c.getImageURL()).into(image);
 
         //TextviewStats
-        TextView lvl = findViewById(R.id.stat_classe_level);
+        TextView lvl = findViewById(R.id.stat_classe_lvl);
         TextView vigor = findViewById(R.id.stat_classe_vigor);
         TextView mind = findViewById(R.id.stat_classe_mind);
         TextView endurance = findViewById(R.id.stat_classe_endurance);

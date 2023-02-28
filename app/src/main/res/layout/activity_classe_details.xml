@@ -128,7 +128,7 @@
         app:layout_constraintTop_toBottomOf="@+id/classe_details_description" />
 
     <TextView
-        android:id="@+id/stat_classe_level"
+        android:id="@+id/stat_classe_lvl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
@@ -192,7 +192,7 @@
         android:shadowRadius="5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/stat_classe_level" />
+        app:layout_constraintTop_toBottomOf="@+id/stat_classe_lvl" />
 
     <TextView
         android:id="@+id/stat_classe_arcane"
