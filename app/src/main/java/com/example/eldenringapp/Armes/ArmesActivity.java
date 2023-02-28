@@ -42,7 +42,37 @@ public class ArmesActivity extends AppCompatActivity {
 
         getJsonData();
 
+        SearchView searchView = findViewById(R.id.armes_search_view);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
 
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                final List<Armes> filteredModelList = filter(toutes_armes, newText);
+                adapter.setFilter(filteredModelList);
+                return false;
+            }
+
+        });
+
+    }
+
+    private List<Armes> filter(List<Armes> models, String query) {
+        query = query.toLowerCase();
+        final List<Armes> filteredModelList = new ArrayList<>();
+        for (Armes model : models) {
+            final String textName = model.getName().toLowerCase();
+            final String textDesc = model.getDescription().toLowerCase();
+            if (textName.contains(query)) {
+                filteredModelList.add(model);
+            }else if (textDesc.contains(query)){
+                filteredModelList.add(model);
+            }
+        }
+        return filteredModelList;
     }
 
     private void getJsonData() {

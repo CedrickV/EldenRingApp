@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.eldenringapp.R;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ArmesAdapter extends RecyclerView.Adapter<ArmesAdapter.ViewHolder> {
@@ -48,6 +49,11 @@ public class ArmesAdapter extends RecyclerView.Adapter<ArmesAdapter.ViewHolder> 
                 view.getContext().startActivity(intent);
             }
         });
+    }
+    public void setFilter(List<Armes> armes) {
+        toutesArmes = new ArrayList<>();
+        toutesArmes.addAll(armes);
+        notifyDataSetChanged();
     }
 
     @Override
