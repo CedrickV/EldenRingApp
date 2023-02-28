@@ -64,7 +64,7 @@ public class ClasseActivity extends AppCompatActivity {
 
                         //Récupération des données stats
                         JSONObject datastats = donnee.getJSONObject("stats");
-                        Log.d(TAG, "onResponse : "+datastats);
+//                        Log.d(TAG, "onResponse : "+datastats);
                         c.setStats(datastats.getString("level"),datastats.getString("vigor"),datastats.getString("mind"),
                                 datastats.getString("endurance"),datastats.getString("strength"),datastats.getString("dexterity"),
                                 datastats.getString("intelligence"),datastats.getString("faith"),datastats.getString("arcane"));
