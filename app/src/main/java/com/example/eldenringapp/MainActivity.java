@@ -14,7 +14,6 @@ import com.example.eldenringapp.Armures.Armures;
 import com.example.eldenringapp.Armures.ArmuresActivity;
 import com.example.eldenringapp.Classe.ClasseActivity;
 import com.example.eldenringapp.Armes.ArmesActivity;
-import com.example.eldenringapp.Recherche.RechercheActivity;
 
 public class MainActivity extends AppCompatActivity {
     public Context context;
@@ -53,11 +52,6 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        Button buttonRecherche = findViewById(R.id.button_Act4);
-        buttonRecherche.setOnClickListener(view -> {
-            Intent intent = new Intent(getApplicationContext(), RechercheActivity.class);
-            startActivity(intent);
-        });
 
 
 

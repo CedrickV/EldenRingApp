@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.SearchView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -47,39 +48,32 @@ public class ArmesActivity extends AppCompatActivity {
     private void getJsonData() {
         String URL = "https://eldenring.fanapis.com/api/weapons?limit=500";
         RequestQueue requestQueue = Volley.newRequestQueue(this);
-        JsonObjectRequest objectRequest = new JsonObjectRequest(Request.Method.GET, URL, null, new Response.Listener<JSONObject>() {
-            @Override
-            public void onResponse(JSONObject response) {
-                //Log.d(TAG, "onResponse: " +response);
-                try {
-                    JSONArray datas = response.getJSONArray("data");
+        JsonObjectRequest objectRequest = new JsonObjectRequest(Request.Method.GET, URL, null, response -> {
+            //Log.d(TAG, "onResponse: " +response);
+            try {
+                JSONArray datas = response.getJSONArray("data");
 
-                    //Log.d(TAG, "onResponse: "+ datas);
+                //Log.d(TAG, "onResponse: "+ datas);
 
-                    for (int i = 0; i < datas.length(); i++) {
-                        JSONObject data = datas.getJSONObject(i);
+                for (int i = 0; i < datas.length(); i++) {
+                    JSONObject data = datas.getJSONObject(i);
 
-                        Armes armes = new Armes();
+                    Armes armes = new Armes();
 
-                        armes.setName(data.getString("name"));
-                        armes.setDescription(data.getString("description"));
-                        armes.setArmeUrl(data.getString("image"));
+                    armes.setName(data.getString("name"));
+                    armes.setDescription(data.getString("description"));
+                    armes.setArmeUrl(data.getString("image"));
 
-                        toutes_armes.add(armes);
-                        adapter.notifyDataSetChanged();
-                    }
-
-
-                } catch (JSONException e) {
-                    throw new RuntimeException(e);
+                    toutes_armes.add(armes);
+                    adapter.notifyDataSetChanged();
                 }
+
+
+            } catch (JSONException e) {
+                throw new RuntimeException(e);
             }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Log.d(TAG, "onErrorResponse" + error.getMessage());
-            }
-        });
+        }, error -> Log.d(TAG, "onErrorResponse" + error.getMessage()));
+
         requestQueue.add(objectRequest);
     }
 }
