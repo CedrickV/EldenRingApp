@@ -1,11 +1,13 @@
 package com.example.eldenringapp.Classe;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.widget.SearchView;
 
 import com.android.volley.Request;
@@ -121,5 +123,12 @@ public class ClasseActivity extends AppCompatActivity {
         requestQueue.add(objectRequest);
 
 
+    }
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == android.R.id.home){
+            onBackPressed();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
