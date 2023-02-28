@@ -14,13 +14,11 @@
         android:theme="@style/Theme.EldenRingApp"
         tools:targetApi="31">
         <activity
-            android:name=".Recherche.RechercheActivity"
-            android:exported="false" />
-        <activity
             android:name=".Armures.ArmuresDetailsActivity"
             android:exported="false" />
         <activity
             android:name=".Armures.ArmuresActivity"
+            android:configChanges="orientation|screenSize"
             android:exported="false" />
         <activity
             android:name=".Classe.ClasseDetailsActivity"
@@ -30,9 +28,11 @@
             android:exported="false" />
         <activity
             android:name=".Armes.ArmesActivity"
+            android:configChanges="orientation|screenSize"
             android:exported="false" />
         <activity
             android:name=".Classe.ClasseActivity"
+            android:configChanges="orientation|screenSize"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
