@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.SearchView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -13,6 +14,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.eldenringapp.Armures.Armures;
 import com.example.eldenringapp.R;
 
 import org.json.JSONArray;
@@ -41,6 +43,34 @@ public class ClasseActivity extends AppCompatActivity {
         ClasseList.setAdapter(adapter);
 
         getJsonData();
+        SearchView searchView = findViewById(R.id.classes_search_view);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                final List<Classe> filteredModelList = filter(all_classes, newText);
+                adapter.setFilter(filteredModelList);
+                return false;
+            }
+
+        });
+
+    }
+    private List<Classe> filter(List<Classe> models, String query) {
+        query = query.toLowerCase();
+        final List<Classe> filteredModelList = new ArrayList<>();
+        for (Classe model : models) {
+            final String textName = model.getName().toLowerCase();
+            if (textName.contains(query)) {
+                filteredModelList.add(model);
+            }
+        }
+        return filteredModelList;
+
     }
 
     private void getJsonData() {

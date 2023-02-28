@@ -14,8 +14,10 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.eldenringapp.Armures.Armures;
 import com.example.eldenringapp.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ClasseAdapter extends RecyclerView.Adapter<ClasseAdapter.ViewHolder>{
@@ -51,6 +53,12 @@ public class ClasseAdapter extends RecyclerView.Adapter<ClasseAdapter.ViewHolder
             }
         });
     }
+    public void setFilter(List<Classe> classes) {
+        allClasses = new ArrayList<>();
+        allClasses.addAll(classes);
+        notifyDataSetChanged();
+    }
+
 
     @Override
     public int getItemCount() {
