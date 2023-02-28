@@ -13,13 +13,15 @@ import android.widget.TextView;
 import com.example.eldenringapp.R;
 import com.squareup.picasso.Picasso;
 
+import java.util.Objects;
+
 public class ClasseDetailsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_classe_details);
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
         Intent i = getIntent();
         Bundle data = i.getExtras();
