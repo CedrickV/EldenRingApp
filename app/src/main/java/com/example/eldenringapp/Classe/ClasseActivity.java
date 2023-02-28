@@ -23,6 +23,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class ClasseActivity extends AppCompatActivity {
 
@@ -35,6 +36,9 @@ public class ClasseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_classe);
+
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+
         all_classes = new ArrayList<>();
 
         ClasseList = findViewById(R.id.class_recycler_view);

@@ -15,6 +15,8 @@ import com.example.eldenringapp.Armures.ArmuresActivity;
 import com.example.eldenringapp.Classe.ClasseActivity;
 import com.example.eldenringapp.Armes.ArmesActivity;
 
+import java.util.Objects;
+
 public class MainActivity extends AppCompatActivity {
     public Context context;
 
@@ -23,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Objects.requireNonNull(getSupportActionBar()).hide();
 
         ImageView imageView = findViewById(R.id.classe_imageView);
         Glide.with(this).load(R.raw.eldenring).into(imageView);

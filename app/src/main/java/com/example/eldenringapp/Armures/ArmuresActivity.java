@@ -23,6 +23,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class ArmuresActivity extends AppCompatActivity {
     public static final String TAG = "TAG";
@@ -35,6 +36,8 @@ public class ArmuresActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_armures);
+
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
         toutes_armures = new ArrayList<>();
         armuresList = findViewById(R.id.armuresList);

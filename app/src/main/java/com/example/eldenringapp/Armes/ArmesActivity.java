@@ -1,11 +1,13 @@
 package com.example.eldenringapp.Armes;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.widget.SearchView;
 
 import com.android.volley.Request;
@@ -23,6 +25,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class ArmesActivity extends AppCompatActivity {
     public static final String TAG = "TAG";
@@ -34,6 +37,8 @@ public class ArmesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_armes);
+
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
         toutes_armes = new ArrayList<>();
         armeList = findViewById(R.id.armesList);
@@ -103,5 +108,12 @@ public class ArmesActivity extends AppCompatActivity {
         }, error -> Log.d(TAG, "onErrorResponse" + error.getMessage()));
 
         requestQueue.add(objectRequest);
+    }
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == android.R.id.home){
+            onBackPressed();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
