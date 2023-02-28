@@ -83,13 +83,13 @@
         android:layout_marginStart="36dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/eldenringfont"
-        android:text="TextView"
-        android:textSize="18sp"
-        android:textColor="#00BCD4"
         android:shadowColor="@color/black"
         android:shadowDx="3"
         android:shadowDy="3"
         android:shadowRadius="5"
+        android:text="TextView"
+        android:textColor="#00BCD4"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/classe_details_description" />
 
