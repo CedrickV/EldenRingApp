@@ -13,10 +13,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.eldenringapp.Armes.Armes;
 import com.example.eldenringapp.Armes.ArmesDetailsActivity;
 import com.example.eldenringapp.R;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ArmuresAdapter extends RecyclerView.Adapter<ArmuresAdapter.ViewHolder> {
@@ -51,7 +53,11 @@ public class ArmuresAdapter extends RecyclerView.Adapter<ArmuresAdapter.ViewHold
             }
         });
     }
-
+    public void setFilter(List<Armures> armures) {
+        toutesArmures = new ArrayList<>();
+        toutesArmures.addAll(armures);
+        notifyDataSetChanged();
+    }
     @Override
     public int getItemCount() {
         return toutesArmures.size();

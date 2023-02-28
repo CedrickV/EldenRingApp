@@ -14,6 +14,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.eldenringapp.Armures.Armures;
 import com.example.eldenringapp.R;
 
 import org.json.JSONArray;
@@ -65,10 +66,7 @@ public class ArmesActivity extends AppCompatActivity {
         final List<Armes> filteredModelList = new ArrayList<>();
         for (Armes model : models) {
             final String textName = model.getName().toLowerCase();
-            final String textDesc = model.getDescription().toLowerCase();
             if (textName.contains(query)) {
-                filteredModelList.add(model);
-            }else if (textDesc.contains(query)){
                 filteredModelList.add(model);
             }
         }

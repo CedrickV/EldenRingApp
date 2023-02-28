@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.SearchView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -13,6 +14,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.eldenringapp.Armes.Armes;
 import com.example.eldenringapp.R;
 
 import org.json.JSONArray;
@@ -37,12 +39,40 @@ public class ArmuresActivity extends AppCompatActivity {
         toutes_armures = new ArrayList<>();
         armuresList = findViewById(R.id.armuresList);
         armuresList.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new ArmuresAdapter(this,toutes_armures);
+        adapter = new ArmuresAdapter(this, toutes_armures);
         armuresList.setAdapter(adapter);
 
         getJsonData();
-    }
 
+        SearchView searchView = findViewById(R.id.armures_search_view);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                final List<Armures> filteredModelList = filter(toutes_armures, newText);
+                adapter.setFilter(filteredModelList);
+                return false;
+            }
+
+        });
+
+    }
+    private List<Armures> filter(List<Armures> models, String query) {
+        query = query.toLowerCase();
+        final List<Armures> filteredModelList = new ArrayList<>();
+        for (Armures model : models) {
+            final String textName = model.getName().toLowerCase();
+            if (textName.contains(query)) {
+                filteredModelList.add(model);
+            }
+        }
+        return filteredModelList;
+
+    }
     private void getJsonData() {
         String URL = "https://eldenring.fanapis.com/api/armors?limit=500";
         RequestQueue requestQueue = Volley.newRequestQueue(this);
