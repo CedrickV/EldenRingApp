@@ -95,7 +95,7 @@ public class ArmuresActivity extends AppCompatActivity {
                         armures.setName(data.getString("name"));
                         armures.setDescription(data.getString("description"));
                         armures.setArmuresUrl(data.getString("image"));
-                        armures.setWeight(data.getString("weight"));
+                        armures.setWeight("Weight : "+data.getString("weight"));
 
                         JSONArray resistance = data.getJSONArray("resistance");
 
