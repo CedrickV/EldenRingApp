@@ -5,7 +5,8 @@
 
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    >
 
     <androidx.cardview.widget.CardView
         android:id="@+id/classe_card_view"
@@ -20,7 +21,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
 
-
+        card_view:cardCornerRadius="20dp"
         card_view:cardElevation="30dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -31,6 +32,7 @@
                 android:id="@+id/classe_imageView"
                 android:layout_width="0dp"
                 android:layout_height="350dp"
+
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
