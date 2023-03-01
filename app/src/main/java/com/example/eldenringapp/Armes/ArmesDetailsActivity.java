@@ -1,6 +1,7 @@
 package com.example.eldenringapp.Armes;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -12,11 +13,18 @@ import android.widget.TextView;
 import com.example.eldenringapp.R;
 import com.squareup.picasso.Picasso;
 
+import java.util.Objects;
+
 public class ArmesDetailsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+        ActionBar actionBar;
+        actionBar = getSupportActionBar();
+        actionBar.setCustomView(R.layout.toolbar_layout);
         setContentView(R.layout.activity_armes_details);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

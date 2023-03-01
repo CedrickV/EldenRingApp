@@ -1,6 +1,7 @@
 package com.example.eldenringapp.Armures;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -13,11 +14,18 @@ import android.widget.TextView;
 import com.example.eldenringapp.R;
 import com.squareup.picasso.Picasso;
 
+import java.util.Objects;
+
 public class ArmuresDetailsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+        ActionBar actionBar;
+        actionBar = getSupportActionBar();
+        actionBar.setCustomView(R.layout.toolbar_layout);
         setContentView(R.layout.activity_armures_details);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -49,8 +57,8 @@ public class ArmuresDetailsActivity extends AppCompatActivity {
         Picasso.get().load(armures.getArmuresUrl()).into(imageArme);
 
 
-        Button buttonfav = findViewById(R.id.checkBox_favoris_armures);
-        buttonfav.setOnClickListener(view -> {
+        Button checkboxfav = findViewById(R.id.checkBox_favoris_armures);
+        checkboxfav.setOnClickListener( view ->{
 
         });
 
