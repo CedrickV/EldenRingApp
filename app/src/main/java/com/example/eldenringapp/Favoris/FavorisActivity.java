@@ -11,15 +11,16 @@ import android.widget.TextView;
 
 import com.example.eldenringapp.R;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 public class FavorisActivity extends AppCompatActivity {
 
     ListView listFav ;
-    List<Objects> objetsFav;
+    List<Favoris> objetsFav;
 
-
+    FavorisAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,9 +31,13 @@ public class FavorisActivity extends AppCompatActivity {
         actionBar.setCustomView(R.layout.toolbar_layout);
         setContentView(R.layout.activity_favoris);
 
+        //listview
+        List<Favoris> favorisList = new ArrayList<>();
+        objetsFav = new ArrayList<>();
 
-
-
+        //get list view
+        listFav =  findViewById(R.id.listview_favoris);
+        listFav.setAdapter(adapter = new FavorisAdapter(this, objetsFav));
 
 
 
