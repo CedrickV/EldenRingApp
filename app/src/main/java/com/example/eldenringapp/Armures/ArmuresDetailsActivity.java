@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -47,6 +48,11 @@ public class ArmuresDetailsActivity extends AppCompatActivity {
         desc.setText(armures.getDescription());
         Picasso.get().load(armures.getArmuresUrl()).into(imageArme);
 
+
+        Button buttonfav = findViewById(R.id.checkBox_favoris_armures);
+        buttonfav.setOnClickListener(view -> {
+
+        });
 
     }
 

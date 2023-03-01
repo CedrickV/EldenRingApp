@@ -15,6 +15,7 @@ import com.example.eldenringapp.Armures.Armures;
 import com.example.eldenringapp.Armures.ArmuresActivity;
 import com.example.eldenringapp.Classe.ClasseActivity;
 import com.example.eldenringapp.Armes.ArmesActivity;
+import com.example.eldenringapp.Favoris.FavorisActivity;
 
 import java.util.Objects;
 
@@ -58,16 +59,11 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-
-
-
-
-
-
-
-
-
-
+        Button buttonFavoris = findViewById(R.id.button_Act4);
+        buttonFavoris.setOnClickListener( view -> {
+            Intent intent = new Intent(getApplicationContext(), FavorisActivity.class);
+            startActivity(intent);
+        });
 
 
 
