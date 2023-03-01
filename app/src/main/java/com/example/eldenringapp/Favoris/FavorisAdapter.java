@@ -16,7 +16,6 @@ import java.util.List;
 public class FavorisAdapter extends BaseAdapter {
 
     private Context context;
-    private List<Object> objetsFav;
     private List<Favoris> listFav;
     private LayoutInflater inflater;
 
@@ -62,4 +61,5 @@ public class FavorisAdapter extends BaseAdapter {
 
         return view;
     }
+
 }

@@ -18,9 +18,9 @@ import java.util.Objects;
 public class FavorisActivity extends AppCompatActivity {
 
     ListView listFav ;
-    List<Favoris> objetsFav;
+    static List<Favoris> objetsFav;
 
-    FavorisAdapter adapter;
+    static FavorisAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,8 +31,6 @@ public class FavorisActivity extends AppCompatActivity {
         actionBar.setCustomView(R.layout.toolbar_layout);
         setContentView(R.layout.activity_favoris);
 
-        //listview
-        List<Favoris> favorisList = new ArrayList<>();
         objetsFav = new ArrayList<>();
 
         //get list view
@@ -40,16 +38,25 @@ public class FavorisActivity extends AppCompatActivity {
         listFav.setAdapter(adapter = new FavorisAdapter(this, objetsFav));
 
 
+    }
 
-
-
-
-
-
-
-
+    public static void addFavoris(String name, String desc, String url){
+        Favoris newFav = new Favoris(name,desc,url);
+        if (!objetsFav.contains(newFav))
+        {
+            objetsFav.add(newFav);
+            adapter.notifyDataSetChanged();
+        }
+    }
+    public static void removeFavoris (Favoris fav){
+        if (objetsFav.contains(fav)){
+            objetsFav.remove(fav);
+            System.out.println("Favoris successly removed");
+        }
+        System.out.println("Favoris couldnt be removed because not in list");
 
     }
+
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == android.R.id.home){

@@ -7,10 +7,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.eldenringapp.Favoris.Favoris;
+import com.example.eldenringapp.Favoris.FavorisActivity;
 import com.example.eldenringapp.R;
 import com.squareup.picasso.Picasso;
 
@@ -57,9 +61,19 @@ public class ArmuresDetailsActivity extends AppCompatActivity {
         Picasso.get().load(armures.getArmuresUrl()).into(imageArme);
 
 
-        Button checkboxfav = findViewById(R.id.checkBox_favoris_armures);
-        checkboxfav.setOnClickListener( view ->{
 
+
+        Button checkboxfav = findViewById(R.id.checkBox_favoris_armures);
+        checkboxfav.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(((CompoundButton) view).isChecked()){
+                    FavorisActivity.addFavoris(armures.getName(),armures.getDescription(),armures.getArmuresUrl());
+                } else {
+                    Favoris fav = new Favoris(armures.getName(),armures.getDescription(),armures.getArmuresUrl());
+                    FavorisActivity.removeFavoris(fav);
+                }
+            }
         });
 
     }
