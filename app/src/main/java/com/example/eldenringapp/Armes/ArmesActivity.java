@@ -103,6 +103,22 @@ public class ArmesActivity extends AppCompatActivity {
                     armes.setDescription(data.getString("description"));
                     armes.setArmeUrl(data.getString("image"));
 
+                    JSONArray resistance = data.getJSONArray("attack");
+
+                    String phy = resistance.getJSONObject(0).getString("amount");
+                    String mag = resistance.getJSONObject(1).getString("amount");
+                    String fire = resistance.getJSONObject(2).getString("amount");
+                    String ligt = resistance.getJSONObject(3).getString("amount");
+                    String holy = resistance.getJSONObject(4).getString("amount");
+                    String crit = resistance.getJSONObject(5).getString("amount");
+
+                    armes.setPhy("Phy : " +phy);
+                    armes.setMag("Mag : " +mag);
+                    armes.setFire("Fire : " +fire);
+                    armes.setLigt("Ligt : "+ligt);
+                    armes.setHoly("Holy : "+holy);
+                    armes.setCrit("Crit : "+crit);
+
                     toutes_armes.add(armes);
                     adapter.notifyDataSetChanged();
                 }

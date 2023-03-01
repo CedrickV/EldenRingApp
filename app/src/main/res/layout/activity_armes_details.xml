@@ -2,65 +2,59 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Armes.ArmesDetailsActivity">
-
-    <ImageView
-        android:id="@+id/imagedArme"
-        android:layout_width="0dp"
-        android:layout_height="220dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagedArme"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="parent"
+        card_view:cardCornerRadius="20dp"
+        card_view:cardElevation="30dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/nomdArme"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="8dp"
-                android:text="Weapon Name"
-                android:fontFamily="@font/eldenringfont"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="Nom de l'arme" />
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/imagedArme"
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            tools:srcCompat="@tools:sample/avatars" />
+
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView">
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.0"
+        card_view:cardCornerRadius="40dp"
+        card_view:cardElevation="30dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
 
             <TextView
                 android:id="@+id/armeDescription"
@@ -69,24 +63,153 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
-                android:layout_marginBottom="8dp"
-                android:text="TextView"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:gravity="center"
+                android:text="Description de l'armure"
+                android:textColor="#000000"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="Description de l'arme " />
+                app:layout_constraintTop_toBottomOf="@+id/nomdArme" />
+
+            <TextView
+                android:id="@+id/nomdArme"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/eldenringfont"
+                android:gravity="center"
+                android:shadowColor="@color/black"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="5"
+                android:text="Nom de l'armure"
+                android:textColor="#000000"
+                android:textSize="27sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/stat_arme_phy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/eldenringfont"
+                android:shadowColor="@color/black"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="5"
+                android:text="TextView"
+                android:textColor="#00BCD4"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/armeDescription" />
+
+            <TextView
+                android:id="@+id/stat_arme_fire"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:fontFamily="@font/eldenringfont"
+                android:shadowColor="@color/black"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="5"
+                android:text="TextView"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#E1AD76"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/armeDescription" />
+
+            <TextView
+                android:id="@+id/stat_arme_mag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/eldenringfont"
+                android:shadowColor="@color/black"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="5"
+                android:text="TextView"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#4CAF50"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/armeDescription" />
+
+            <TextView
+                android:id="@+id/stat_arme_holy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/eldenringfont"
+                android:shadowColor="@color/black"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="5"
+                android:text="TextView"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.474"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/stat_arme_mag" />
+
+            <TextView
+                android:id="@+id/stat_arme_ligt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/eldenringfont"
+                android:shadowColor="@color/black"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="5"
+                android:text="TextView"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#F80000"
+                app:layout_constraintBottom_toBottomOf="@+id/stat_arme_holy"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/stat_arme_phy" />
+
+            <TextView
+                android:id="@+id/stat_arme_crit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:fontFamily="@font/eldenringfont"
+                android:shadowColor="@color/black"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="5"
+                android:text="TextView"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#6B00FF"
+                app:layout_constraintBottom_toBottomOf="@+id/stat_arme_holy"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/stat_arme_fire" />
+
+            <CheckBox
+                android:id="@+id/checkBox_favoris_armures"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Ajouter aux favoris"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/stat_arme_holy" />
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
-
-    <CheckBox
-        android:id="@+id/checkBox_favoris_armes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Ajouter aux favoris"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

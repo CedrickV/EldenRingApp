@@ -37,6 +37,20 @@ public class ArmesDetailsActivity extends AppCompatActivity {
         TextView desc = findViewById(R.id.armeDescription);
         ImageView imageArme = findViewById(R.id.imagedArme);
 
+        TextView phy = findViewById(R.id.stat_arme_phy);
+        TextView mag = findViewById(R.id.stat_arme_mag);
+        TextView fire = findViewById(R.id.stat_arme_fire);
+        TextView ligt = findViewById(R.id.stat_arme_ligt);
+        TextView holy = findViewById(R.id.stat_arme_holy);
+        TextView crit = findViewById(R.id.stat_arme_crit);
+
+        phy.setText(armes.getPhy());
+        mag.setText(armes.getMag());
+        fire.setText(armes.getFire());
+        ligt.setText(armes.getLigt());
+        holy.setText(armes.getHoly());
+        crit.setText(armes.getCrit());
+
         name.setText(armes.getName());
         desc.setText(armes.getDescription());
         Picasso.get().load(armes.getArmeUrl()).into(imageArme);

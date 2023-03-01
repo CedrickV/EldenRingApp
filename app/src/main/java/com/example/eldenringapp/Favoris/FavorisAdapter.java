@@ -32,10 +32,6 @@ public class FavorisAdapter extends RecyclerView.Adapter<FavorisAdapter.ViewHold
 
     }
 
-    @Override
-    public void onBindViewHolder(@NonNull FavorisAdapter holder, int position) {
-
-    }
 
     @Override
     public int getItemCount() {
