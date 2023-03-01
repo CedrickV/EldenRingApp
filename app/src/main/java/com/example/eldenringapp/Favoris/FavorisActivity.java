@@ -11,22 +11,34 @@ import android.widget.TextView;
 
 import com.example.eldenringapp.R;
 
+import java.util.List;
 import java.util.Objects;
 
 public class FavorisActivity extends AppCompatActivity {
 
     ListView listFav ;
+    List<Objects> objetsFav;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_favoris);
-
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         ActionBar actionBar;
         actionBar = getSupportActionBar();
         actionBar.setCustomView(R.layout.toolbar_layout);
+        setContentView(R.layout.activity_favoris);
+
+
+
+
+
+
+
+
+
+
 
 
 
